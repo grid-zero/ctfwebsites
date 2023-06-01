@@ -9,8 +9,9 @@ body {
 
 p{
     font-size: 20px;
-    color: #DDE6ED;
+    color: #27374D;
     text-align: center;
+    background-color:#DDE6ED;
 }
 #login-container {
     display: flex;

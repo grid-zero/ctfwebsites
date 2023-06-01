@@ -1,66 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-
-#wrapper {
-    border: 1px solid blue;
-    
-    display:flex;
-}
-#div1 {    
-    flex:20%;
-    border: 1px solid red;
-}
-#div2 {    
-    flex:80%;
-    border: 1px solid red;
-    width:1%;
-}
-#div3 {    
-    padding:0px;
-    width:30%;
-}
-table {
-
-  border-spacing: 10;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-        </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <p>Hello and welcome to the secure file storage service, please select an area from the left and enter the corresponding password to recieve the location that it is stored in <br> our top of the line secure servers use the hightech sql to store the data in a proper and secure manner to ensure the very best security for your files and info</p>
-        <div id="wrapper">
-            <div id="div1">
-            <table border='10'>
-                <tr><td> images </td></tr>
-                <tr><td> data </td></tr>
-                <tr><td> files </td></tr>
-    
-            </table>
-            </div>
-            <div id="div2">
-                <div id=div3>
-            <form action="index.php" method="post">
-            Enter page name: <input style = "float:right;" type = "text" name = "pagename">
-            <br>
-            Enter page password:  <input style = "float:right" type = "text" name = "password">
-            <br>
-            <input type="submit" name="someAction" value="GO" />
-            </form>
-</div>
+        <p>Hello and welcome to the secure file storage service (SFSS). Please select a directory from the left and enter the password.</p>
+        <div>
+        <div id="login-container">
+        
+                <div id="login-form">
+                <form action="index.php" method="post">
+                        <label for="pagename">Enter page name:</label>
+                        <input type="text" name="pagename" id="pagename">
+                        <br>
+                        <label for="password">Enter page password:</label>
+                        <input type="text" name="password" id="password">
+                        <br>
+                        <input type="submit" name="someAction" value="GO">
+                </form>
                 </div>
+            </div>
+        
+            </div>
         </div>
-        <p backdoor passowrd="'OR 1='1"> </p>
+
+        <div>
+        <div>
+        <div>
+        <div>
+        <div locations = "images, files, data">
+        <div backdoor password = "' OR 1='1">
+        <div>
+    
         <?php
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
 {
@@ -83,19 +54,23 @@ if ($connection->connect_error) {
 }
 
 
-
 echo "<br>";
-$sql = "SELECT * FROM data WHERE id = '$_POST[pagename]' AND(password = '$_POST[password]')";
+echo "<div id='result'>";
+echo "<div id='resultlower'>";
+echo "Query: ";
+$sql = "SELECT * FROM data WHERE id = '$_POST[pagename]' AND (password = '$_POST[password]')";
 echo $sql;
-echo "<br>";
 $result = $connection->query($sql);
 $row= $result->fetch_assoc();
-echo "The page location is:  ";
-echo $row["location"];  
+echo "<br>";
+echo "The directory location is:  ";
+echo $row["location"] . ".";  
 }
+echo "</div>";
+echo "</div>";
  ?>
 
-    </body>
+</body>
 
 
 
