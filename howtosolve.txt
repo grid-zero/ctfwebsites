@@ -1,0 +1,31 @@
+method
+To access the flag there are 2 methods.
+1: use sql injection to find the hidden directorys
+2: use gobuster to find the hidden directorys
+
+Method 1:
+using inspect element. The username for the directorys can be found in some divs
+A peice of code that bypasses the password field can be found under a div with backdoor password = ' OR 1 = '1
+This modifies the password field, to password = '' OR 1='1'. As such as long as the username is correct you will have access to theinformation
+the ' closes the password field, OR means that either the password or something else needs to be correct. 1='1 checks if the number 1 is equll to the char 1
+the closing ' is from the original password field. In sql 1='1' return true
+The main goal of an sql injection bypass is to get somesort of return true value to gain access.
+Using the sql injection the location of the images,data and files directorys that contina the flag
+
+Method2:
+The second method to find the directorys is to use the provided wordlist and the program gobuster to brute force find the hidden directorys
+this method is more stragitforward to perform
+
+
+
+Once the hidden directorys are found the flag can be aquired as below
+data contains information on how the flag is obscured and stored and indirectly informs the person on how to get the flag
+files is a red hering/joke that does nothing
+images contains an image that appears normal
+this image however contains an zip archive appended to the end.
+opening this image in a normal image viewer would only yield the image and no information\
+however if it is opened and extracted with a zipextracter a textdocument containing the flag.
+
+
+
+
