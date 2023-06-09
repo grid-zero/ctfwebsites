@@ -9,7 +9,8 @@ Can you get it for me?
 The only thing I remember is that it sorta looked like secretData{password}.  
 
 It is stored Somewhere on the webserver, hidden away.
-  
+
+
 
 # Some things that might be useful:
 
@@ -18,6 +19,7 @@ It is stored Somewhere on the webserver, hidden away.
 - Inspect element
 
 - gobuster
+- This wordlist i found for the website not sure of the use though
 
 - 7zip or other zip software
 
