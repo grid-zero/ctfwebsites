@@ -1,0 +1,4 @@
+all content in the folder sqltest is hosted on a webserver
+
+the sql folder contains the sql database that connects to the website stored in sqltest
+in the sql folder data.sql contains sql commands to recreate the database if needed.
